@@ -1,0 +1,39 @@
+.left{
+    flex: 1;
+    position: sticky;
+    height: 90vh;
+    top: 50px;
+    
+   
+}
+.right{
+    flex: 3;
+}
+.products{
+ 
+    width: 90vw;
+  
+  
+    
+}
+.categoryImg{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 50px;
+}
+@media only screen and (max-width: 600px){
+    
+    .right{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+       
+
+    }
+    .products{
+        padding-left: 0;
+    }
+    
+  
+   
+}

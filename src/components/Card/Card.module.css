@@ -1,0 +1,70 @@
+.card{
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+.image{
+width: 100%;
+height: 200px;
+
+position: relative;
+}
+.mainImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.span{
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    background-color: #fff;
+    color: teal;
+    font-size: 1.5rem;
+    padding: 3px 5px;
+}
+.prices{
+    display: flex;
+    gap: 20px;
+    margin-top: 0;
+   
+}
+.prices h3{
+font-size: 18px;
+font-weight: 500;
+}
+.oldPrice{
+    text-decoration: line-through;
+    color: gray;
+}
+.title{
+    margin-top: 0;
+    margin-bottom: 0.4px;
+    
+}
+@media only screen and (max-width: 600px)
+{
+    .card > *{
+        padding-left: 2.5rem;
+        padding-right: 2rem;
+    }
+    .card{
+        width: 120px;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        margin-bottom: 10px;
+        
+    }
+    .image{
+    width: 100%;
+    height: 120px;
+    position: relative;
+    }
+    .span{
+        top: 0px;
+        left: 22px;
+    }
+  }
