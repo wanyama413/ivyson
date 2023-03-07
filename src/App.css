@@ -12,12 +12,6 @@ width: 100%;
   will-change: filter;
   transition: filter 300ms;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 0.61em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 0.6em #61dafbaa);
-}
 .appLayout{
   display: grid;
   height: 100vh;
@@ -26,6 +20,7 @@ width: 100%;
   grid-template-areas: 'header header header'
   'main main main'
   'footer footer footer';
+
 }
 header,footer{
   
@@ -88,6 +83,7 @@ ul{
   list-style-type: none;
   justify-content: space-evenly;
   font-size: 1.6rem;
+
 
   
 }
@@ -166,7 +162,6 @@ h4{
   margin-bottom: 6px;
 }
 p{
-  width: 35ch;
   text-align: justify;
   font-size: 3rem;
 }
@@ -186,10 +181,5 @@ p{
   }
 }
 
-.card {
-  padding: 2em;
-}
 
-.read-the-docs {
-  color: #888;
-}
+

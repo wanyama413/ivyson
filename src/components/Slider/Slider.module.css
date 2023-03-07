@@ -1,11 +1,11 @@
 .slider{
 height: calc(100vh- 70px);
   position: relative;
-
+  
 width: 100vw;
 }
 .container{
- 
+
 height: 80vh;
 display: flex;
 width: 300vw;

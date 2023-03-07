@@ -5,7 +5,7 @@ const Error = () => {
   const navigate=useNavigate()
 useEffect(()=>{
   setTimeout(()=>{
-navigate('.')
+navigate('/')
   },100)
 })
   return (

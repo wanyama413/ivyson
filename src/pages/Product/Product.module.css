@@ -62,7 +62,7 @@ p{
     width: 250px;
     padding: 10px;
     background-color: #2879fe;
-    color: #fff;
+    color: #e4afaf;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,6 +81,17 @@ p{
     gap: 10px;
     color: #2879fe;
     font-size: 14px;
+}
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+    z-index: 999;
+    height: 100%;
+    width: 100%;
 }
 .info{
     display: flex;

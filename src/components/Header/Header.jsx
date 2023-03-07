@@ -2,11 +2,12 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import {useDispatch, useSelector} from 'react-redux'
-import cart from '../../assets/cart.png'
-import logo from '../../assets/logo.jpg'
+import cart from '../../assets/cart.webp'
+import logo from '../../assets/logo.webp'
 import Cart from '../Cart/Cart'
 import { NavLink } from 'react-router-dom'
 import { flipper } from '../../redux/cartReducer'
+
 const Header = () => {
  const isOpen=useSelector(state=>state.cart.open)
  const [open,setOpen]=useState(false)
@@ -72,9 +73,10 @@ setSidebar(true)
       {sidebar&&<div className='sidebar'>
 <div className='close' onClick={()=>setSidebar(false)}>X</div>
 <div >
-  <ul className='sidebarBody'  onClick={()=>setSidebar(false) }>
+
+  <ul className='sidebarBody' onClick={()=>setSidebar(false) } >
     <li  onClick={handleCloseCart}><Link to='/'>Home</Link></li>
-    <li  onClick={handleCloseCart}><Link to='/products/1'>Our Products</Link></li>
+      <li  onClick={handleCloseCart}><Link to='/products/1'>Our Products</Link></li>
     <li  onClick={handleCloseCart}><Link to='/products/2'>Our Services</Link></li>
     <li onClick={()=>dispatch(flipper(true))}><Link to='checkout'>View Cart</Link></li>
     <li  onClick={handleCloseCart}> <NavLink to='https://goo.gl/maps/41dci6PXoMP6WBQUA' target='_blank

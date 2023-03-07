@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 import classes from './Slider.module.css'
-
-import one from '../../assets/five.png'
-import two from '../../assets/six.png'
-import bitzer from '../../assets/bitzer.png'
-import danfos from '../../assets/danfoss.png'
+import one from '../../assets/five.webp'
+import bitzer from '../../assets/bitzer.webp'
+import danfos from '../../assets/danfoss.webp'
 
 const Slider = () => {
     const [currentSlider,setCurrentSlider]=useState(0)

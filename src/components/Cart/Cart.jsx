@@ -1,11 +1,9 @@
 import React from 'react'
-import { loadStripe } from "@stripe/stripe-js";
 import classes from './Cart.module.css'
 import {useSelector} from 'react-redux'
 import {useDispatch} from 'react-redux'
-import {makeRequest} from '../../makeRequest'
 import {removeItem,resetCart} from '../../redux/cartReducer'
-// import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined'
+
 
 const Cart = () => {
 
@@ -16,23 +14,7 @@ const Cart = () => {
     products.forEach(item=>total+=item.quantity*item.price)
     return total.toFixed(2)
   }
-  const stripePromise = loadStripe(
-    "pk_test_51Mf6JzHlDfEnHgXvMbLT9VsbZimdlh46qHm0eXnQQabQmp21oeXy41Z606JlLSOM3qwTUwLw8EM7lk6VJLLbEK0d009IQiMa1l"
-  );
-   const handlePayment = async () => {
-    try {
-      const stripe = await stripePromise;
-      const res = await makeRequest.post("/orders", {
-        products,
-      });
-      await stripe.redirectToCheckout({
-        sessionId: res.data.stripeSession.id,
-      });
-
-    } catch (err) { 
-      console.log(err);
-    }
-  };
+  
   return (
     <div className={classes.cart}>
       <h1>Products in your cart</h1>
@@ -52,7 +34,7 @@ const Cart = () => {
       <span>SUBTOTAL</span>
       <span>Ksh.{totalAmount()}</span>
      </div>
-     <button onClick={handlePayment} className={classes.checkBtn}>PROCEED TO CHECKOUT</button>
+     <button  className={classes.checkBtn}>PROCEED TO CHECKOUT</button>
      <span className={classes.reset} onClick={()=>dispatch(resetCart())}>Reset Cart</span>
     </div>
   )

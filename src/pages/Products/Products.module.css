@@ -3,15 +3,23 @@
     position: sticky;
     height: 90vh;
     top: 50px;
+    grid-area: one;
+    padding: 0px 20px;
     
    
 }
 .right{
     flex: 3;
+  top: 50px;
+    grid-area: two;
+   
 }
 .products{
  
     width: 90vw;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 'one two';
   
   
     
